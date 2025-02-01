@@ -1,7 +1,7 @@
 {
     "name": "CosmosHelper",
     "clients": [],
-    "modelProvider": "groq",
+    "modelProvider": "openrouter",
     "settings": {
         "voice": {
             "model": "en_US-male-medium"
