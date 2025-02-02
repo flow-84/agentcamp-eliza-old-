@@ -40,11 +40,7 @@
         "@elizaos/core": "workspace:*",
         "@elizaos/plugin-0g": "workspace:*",
         "@elizaos/plugin-abstract": "workspace:*",
-<<<<<<< HEAD
-        "@elizaos/plugin-agentcamp": "workspace:*",
-=======
         "@elizaos/plugin-agentkit": "workspace:*",
->>>>>>> tags/v0.1.9+patch.1
         "@elizaos/plugin-aptos": "workspace:*",
         "@elizaos/plugin-birdeye": "workspace:*",
         "@elizaos/plugin-zerion": "workspace:*",
