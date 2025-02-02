@@ -52,16 +52,11 @@ import { zgPlugin } from "@elizaos/plugin-0g";
 import { footballPlugin } from "@elizaos/plugin-football";
 
 import { bootstrapPlugin } from "@elizaos/plugin-bootstrap";
-<<<<<<< HEAD
-import { agentcampPlugin } from "@elizaos/plugin-agentcamp";
-import createGoatPlugin from "@elizaos/plugin-goat";
-=======
 import { normalizeCharacter } from "@elizaos/plugin-di";
 import createGoatPlugin from "@elizaos/plugin-goat";
 import createZilliqaPlugin from "@elizaos/plugin-zilliqa";
 
 // import { intifacePlugin } from "@elizaos/plugin-intiface";
->>>>>>> tags/v0.1.9+patch.1
 import { ThreeDGenerationPlugin } from "@elizaos/plugin-3d-generation";
 import { abstractPlugin } from "@elizaos/plugin-abstract";
 import { akashPlugin } from "@elizaos/plugin-akash";
@@ -147,8 +142,6 @@ import net from "net";
 import path from "path";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
-<<<<<<< HEAD
-=======
 import { emailPlugin } from "@elizaos/plugin-email";
 import { emailAutomationPlugin } from "@elizaos/plugin-email-automation";
 import { seiPlugin } from "@elizaos/plugin-sei";
@@ -162,7 +155,6 @@ import { ankrPlugin } from "@elizaos/plugin-ankr";
 import { formPlugin } from "@elizaos/plugin-form";
 import { MongoClient } from "mongodb";
 import { quickIntelPlugin } from "@elizaos/plugin-quick-intel";
->>>>>>> tags/v0.1.9+patch.1
 
 import { trikonPlugin } from "@elizaos/plugin-trikon";
 import arbitragePlugin from "@elizaos/plugin-arbitrage";
@@ -332,13 +324,9 @@ async function jsonToCharacter(
 
     // .id isn't really valid
     const characterId = character.id || character.name;
-<<<<<<< HEAD
-    const characterPrefix = `CHARACTER.${characterId.toUpperCase().replace(/ /g, "_")}.`;
-=======
     const characterPrefix = `CHARACTER.${characterId
         .toUpperCase()
         .replace(/ /g, "_")}.`;
->>>>>>> tags/v0.1.9+patch.1
     const characterSettings = Object.entries(process.env)
         .filter(([key]) => key.startsWith(characterPrefix))
         .reduce((settings, [key, value]) => {
@@ -1042,9 +1030,6 @@ export async function createAgent(
                 ? elizaCodeinPlugin
                 : null,
             bootstrapPlugin,
-<<<<<<< HEAD
-            agentcampPlugin,
-=======
             getSecret(character, "CDP_API_KEY_NAME") &&
             getSecret(character, "CDP_API_KEY_PRIVATE_KEY") &&
             getSecret(character, "CDP_AGENT_KIT_NETWORK")
@@ -1054,7 +1039,6 @@ export async function createAgent(
                 ? dexScreenerPlugin
                 : null,
             getSecret(character, "FOOTBALL_API_KEY") ? footballPlugin : null,
->>>>>>> tags/v0.1.9+patch.1
             getSecret(character, "CONFLUX_CORE_PRIVATE_KEY")
                 ? confluxPlugin
                 : null,
@@ -1064,8 +1048,6 @@ export async function createAgent(
                 ? nitroPlugin
                 : null,
             getSecret(character, "TAVILY_API_KEY") ? webSearchPlugin : null,
-<<<<<<< HEAD
-=======
             getSecret(character, "SOLANA_PUBLIC_KEY") ||
             (getSecret(character, "WALLET_PUBLIC_KEY") &&
                 !getSecret(character, "WALLET_PUBLIC_KEY")?.startsWith("0x"))
@@ -1111,7 +1093,6 @@ export async function createAgent(
             getSecret(character, "COINBASE_COMMERCE_KEY")
                 ? coinbaseCommercePlugin
                 : null,
->>>>>>> tags/v0.1.9+patch.1
             getSecret(character, "FAL_API_KEY") ||
             getSecret(character, "OPENAI_API_KEY") ||
             getSecret(character, "VENICE_API_KEY") ||
@@ -1133,9 +1114,6 @@ export async function createAgent(
                 getSecret(character, "SGX"))
                 ? teeLogPlugin
                 : null,
-<<<<<<< HEAD
-        ].filter(Boolean),
-=======
             getSecret(character, "OMNIFLIX_API_URL") &&
             getSecret(character, "OMNIFLIX_MNEMONIC")
                 ? OmniflixPlugin
@@ -1310,7 +1288,6 @@ export async function createAgent(
         ]
             .flat()
             .filter(Boolean),
->>>>>>> tags/v0.1.9+patch.1
         providers: [],
         managers: [],
         cacheManager: cache,
